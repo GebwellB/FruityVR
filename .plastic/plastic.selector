@@ -1,0 +1,4 @@
+repository "Fruity VR/Fruity VR@16768295805141@cloud"
+  path "/"
+    br "/main"
+    co "/main"
