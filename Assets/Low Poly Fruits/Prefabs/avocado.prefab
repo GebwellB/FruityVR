@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6685585442423061821}
   - component: {fileID: 4108739143002808065}
   - component: {fileID: -8316996042878097815}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: avocado
   m_TagString: Fruit
   m_Icon: {fileID: 0}

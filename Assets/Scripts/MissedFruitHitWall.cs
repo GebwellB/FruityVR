@@ -47,6 +47,8 @@ public class MissedFruitHitWall : MonoBehaviour
 
     void Die()
     {
+        GameObject[] fruit = GameObject.FindGameObjectsWithTag("Fruit");
+        
         fruitSpawner.gameRunning = false;
         int combinedScore = 0;
         int leftSwordScore = swordSlicerLeft.GetFinalScore();
@@ -55,6 +57,11 @@ public class MissedFruitHitWall : MonoBehaviour
         scoreText.text = "Fruit Destroyed: " + combinedScore;
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
+
+        foreach (GameObject f in fruit)
+        {
+            Destroy(f);
+        }
     }
 
     public void Retry()

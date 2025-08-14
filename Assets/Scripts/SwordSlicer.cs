@@ -19,7 +19,6 @@ public class SwordSlicer : MonoBehaviour
     void AddScore(int amount)
     {
         score += amount;
-        scoreText.text = "Fruit Destroyed: " + score.ToString();
     }
     // This gets called from the wall that destroys all the fruit, to get the total score
     public int GetFinalScore()

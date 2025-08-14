@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 251905536}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 251905535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.065, y: 8, z: 2}
+  m_LocalPosition: {x: -31.744, y: 8.946, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1210,7 +1210,7 @@ Transform:
   m_GameObject: {fileID: 423640618}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -2, y: 4, z: 2.75}
+  m_LocalPosition: {x: -1.54, y: 4, z: 2.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1344,7 +1344,7 @@ Transform:
   m_GameObject: {fileID: 424403947}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 2, y: 4, z: 0}
+  m_LocalPosition: {x: 1.551, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1803,7 +1803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504509023}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1819,7 @@ Transform:
   m_GameObject: {fileID: 504509022}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 8.155, z: 2}
+  m_LocalPosition: {x: -30, y: 8.52, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2056,7 +2056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651743410}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ Transform:
   m_GameObject: {fileID: 651743409}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.75, y: 8.274, z: 2}
+  m_LocalPosition: {x: -31.203, y: 8.274, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2499,7 +2499,7 @@ Transform:
   m_GameObject: {fileID: 748212256}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.32, z: -2.07}
+  m_LocalPosition: {x: 0, y: 1.79, z: -2.07}
   m_LocalScale: {x: 5, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3966,7 +3966,7 @@ Transform:
   m_GameObject: {fileID: 1141833785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
-  m_LocalPosition: {x: -1.38, y: 3.93, z: 34.04}
+  m_LocalPosition: {x: -1.38, y: 3.93, z: 21.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4114,7 +4114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1206768631}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: FruitSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5014,7 +5014,7 @@ Transform:
   m_GameObject: {fileID: 1378658443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 1, y: 4, z: 0}
+  m_LocalPosition: {x: 1, y: 2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5023,6 +5023,114 @@ Transform:
   - {fileID: 1116549617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &1424802707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424802711}
+  - component: {fileID: 1424802710}
+  - component: {fileID: 1424802709}
+  - component: {fileID: 1424802708}
+  m_Layer: 0
+  m_Name: Invisible Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!64 &1424802708
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424802707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 16
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1424802709
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424802707}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1424802710
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424802707}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1424802711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424802707}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 1.6, y: 4.45, z: 2.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!1 &1552561627
 GameObject:
   m_ObjectHideFlags: 0
@@ -5223,7 +5331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593062878}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5239,7 +5347,7 @@ Transform:
   m_GameObject: {fileID: 1593062877}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.241, y: 8, z: 2}
+  m_LocalPosition: {x: -30.49, y: 8.18, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5329,7 +5437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631037817}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5345,7 +5453,7 @@ Transform:
   m_GameObject: {fileID: 1631037816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.67, y: 8, z: 2}
+  m_LocalPosition: {x: -30.67, y: 8.945, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5614,7 +5722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1863465571}
   - component: {fileID: 1863465574}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint1 - Main
   m_TagString: Fruit
   m_Icon: {fileID: 0}
@@ -5630,7 +5738,7 @@ Transform:
   m_GameObject: {fileID: 1863465570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31, y: 8, z: 2}
+  m_LocalPosition: {x: -30.5, y: 8, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5686,7 +5794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1868572481}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5702,7 +5810,7 @@ Transform:
   m_GameObject: {fileID: 1868572480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.878, y: 8, z: 2}
+  m_LocalPosition: {x: -31.878, y: 8.642, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6170,7 +6278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125407350}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SpawnPoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6186,7 +6294,7 @@ Transform:
   m_GameObject: {fileID: 2125407349}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.23, y: 8, z: 2}
+  m_LocalPosition: {x: -31.91, y: 8, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6210,3 +6318,4 @@ SceneRoots:
   - {fileID: 1378658447}
   - {fileID: 1141833789}
   - {fileID: 1206768631}
+  - {fileID: 1424802711}
