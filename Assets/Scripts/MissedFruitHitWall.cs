@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MissedFruitHitWall : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class MissedFruitHitWall : MonoBehaviour
 
     public SwordSlicer swordSlicerLeft;
     public SwordSlicer swordSlicerRight;
+
+    public AudioSource fruitSquishAudioSource;
+    public AudioClip fruitSquishClip;
+    public AudioSource gameOverAudioSource;
+    public AudioClip gameOverClip;
 
     public FruitSpawner fruitSpawner;
     public int maxHealth = 100;
@@ -39,8 +45,11 @@ public class MissedFruitHitWall : MonoBehaviour
         currentHealth -= damage;
         HealthBar.value = currentHealth;
 
+        fruitSquishAudioSource.PlayOneShot(fruitSquishClip);
+
         if (currentHealth <= 0)
         {
+            gameOverAudioSource.PlayOneShot(gameOverClip);
             Die();
         }
     }

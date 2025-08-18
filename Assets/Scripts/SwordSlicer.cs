@@ -8,11 +8,15 @@ public class SwordSlicer : MonoBehaviour
     public TMP_Text scoreText;
     public int scorePerFruit = 1;
 
+    public AudioSource swordSliceAudioSource;
+    public AudioClip swordSliceClip;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Fruit"))
         {
             Destroy(other.gameObject);
+            swordSliceAudioSource.PlayOneShot(swordSliceClip);
             AddScore(scorePerFruit);
         }
     }
