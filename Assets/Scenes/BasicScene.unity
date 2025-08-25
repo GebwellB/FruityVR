@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &69782262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.015, y: -0.4014399}
+  m_AnchoredPosition: {x: 0.043, y: -0.498}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69782263
@@ -2434,7 +2434,7 @@ GameObject:
   - component: {fileID: 429167625}
   m_Layer: 0
   m_Name: Audio
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2567,6 +2567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff46d60ceebeff4ba3e92797bad3a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fruitSplatAudioSource: {fileID: 934255669}
+  gameOverAudioSource: {fileID: 1157428757}
+  swordSliceAudioSource: {fileID: 386856258}
 --- !u!1001 &441087506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2951,14 +2954,14 @@ PrefabInstance:
       addedObject: {fileID: 373888798}
     - targetCorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 441087508}
+      addedObject: {fileID: 441087514}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
 --- !u!1 &441087507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 202364687, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 441087506}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &441087508
+--- !u!114 &441087514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2967,11 +2970,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 441087507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4539b4bb3e502834f8eb0c031f7f7c28, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cd191af7ab4da04e92d3d6c4298faa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoolValueReader: {fileID: 11400000, guid: 920261c238799ce41ae18689f1275ae1, type: 2}
-  m_FloatValueReader: {fileID: 0}
+  menuButtonpressed: {fileID: -1606309936720917562, guid: b00d1f9ddc0b5cb438605c2e7937edd4, type: 3}
+  pauseMenu: {fileID: 69782261}
 --- !u!1 &485112788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 98318b7fbb6008a488a87d8f130a5b45, type: 3}
@@ -3045,7 +3048,6 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 0}
   scorePerFruit: 1
-  swordSliceAudioSource: {fileID: 386856258}
   swordSliceClip: {fileID: 8300000, guid: 4878ad0cb0ef92049b99a5740591a0f8, type: 3}
 --- !u!1 &504509022
 GameObject:
@@ -4050,14 +4052,13 @@ MonoBehaviour:
   scoreText: {fileID: 2004424573}
   swordSlicerLeft: {fileID: 485112794}
   swordSlicerRight: {fileID: 1326890972}
-  fruitSquishAudioSource: {fileID: 934255669}
   fruitSquishClip: {fileID: 8300000, guid: 262248d837d1d6148a5c7d1f0fd43dc8, type: 3}
-  gameOverAudioSource: {fileID: 1157428757}
   gameOverClip: {fileID: 8300000, guid: 924f30e57dd39d842a5cdbcf21f48327, type: 3}
   fruitSpawner: {fileID: 1863465574}
   maxHealth: 100
   currentHealth: 0
   damageAmount: 10
+  combinedScore: 0
 --- !u!64 &748212262
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6702,7 +6703,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1202782274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441087514}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnResumeButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1202782274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7486,7 +7499,6 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 0}
   scorePerFruit: 1
-  swordSliceAudioSource: {fileID: 386856258}
   swordSliceClip: {fileID: 8300000, guid: 4878ad0cb0ef92049b99a5740591a0f8, type: 3}
 --- !u!1 &1370915466
 GameObject:
@@ -8601,7 +8613,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1646385663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441087514}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnQuitButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1646385663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8886,7 +8910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Retry
+  m_text: End Run
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9761,7 +9785,7 @@ GameObject:
   - component: {fileID: 2055169291}
   - component: {fileID: 2055169290}
   m_Layer: 5
-  m_Name: Retry
+  m_Name: EndRun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9830,7 +9854,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2055169291}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 441087514}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnRetryButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2055169291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10041,10 +10077,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2100747207}
   - component: {fileID: 2100747208}
-  - component: {fileID: 2100747209}
   m_Layer: 0
   m_Name: Music
-  m_TagString: Music
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10161,18 +10196,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2100747209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100747206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff46d60ceebeff4ba3e92797bad3a6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2109120406
 GameObject:
   m_ObjectHideFlags: 0

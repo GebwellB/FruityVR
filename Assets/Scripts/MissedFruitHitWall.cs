@@ -2,10 +2,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
 
 public class MissedFruitHitWall : MonoBehaviour
 {
+    public static MissedFruitHitWall Instance;
+
     public Slider HealthBar;
     public GameObject mainMenu;
     public GameObject gameOverPanel;
@@ -14,21 +15,29 @@ public class MissedFruitHitWall : MonoBehaviour
     public SwordSlicer swordSlicerLeft;
     public SwordSlicer swordSlicerRight;
 
-    public AudioSource fruitSquishAudioSource;
+    private AudioSource fruitSquishAudioSource;
     public AudioClip fruitSquishClip;
-    public AudioSource gameOverAudioSource;
+    private AudioSource gameOverAudioSource;
     public AudioClip gameOverClip;
 
     public FruitSpawner fruitSpawner;
     public int maxHealth = 100;
     public int currentHealth;
     public int damageAmount = 10;
+    public int combinedScore;
 
     private void Start()
     {
         currentHealth = maxHealth;
         HealthBar.maxValue = maxHealth;
         HealthBar.value = currentHealth;
+        fruitSquishAudioSource = PersistentMusic.audioSingleton.GetComponent<PersistentMusic>().fruitSplatAudioSource;
+        gameOverAudioSource = PersistentMusic.audioSingleton.GetComponent<PersistentMusic>().gameOverAudioSource;
+    }
+
+    private void Awake()
+    {
+        Instance = this;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,21 +54,19 @@ public class MissedFruitHitWall : MonoBehaviour
         currentHealth -= damage;
         HealthBar.value = currentHealth;
 
-        fruitSquishAudioSource.PlayOneShot(fruitSquishClip);
+        fruitSquishAudioSource.Play();
 
         if (currentHealth <= 0)
         {
-            gameOverAudioSource.PlayOneShot(gameOverClip);
+            gameOverAudioSource.Play();
             Die();
         }
     }
 
-    void Die()
+    public void Die()
     {
         GameObject[] fruit = GameObject.FindGameObjectsWithTag("Fruit");
         
-        fruitSpawner.gameRunning = false;
-        int combinedScore = 0;
         int leftSwordScore = swordSlicerLeft.GetFinalScore();
         int rightSwordScore = swordSlicerRight.GetFinalScore();
         combinedScore = leftSwordScore + rightSwordScore;
@@ -71,11 +78,15 @@ public class MissedFruitHitWall : MonoBehaviour
         {
             Destroy(f);
         }
+
     }
 
     public void Retry()
     {
         Time.timeScale = 1f;
+        currentHealth = maxHealth;
+        combinedScore = 0;
+        fruitSpawner.gameRunning = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
