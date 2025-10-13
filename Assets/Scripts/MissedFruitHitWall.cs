@@ -11,6 +11,7 @@ public class MissedFruitHitWall : MonoBehaviour
     public GameObject mainMenu;
     public GameObject gameOverPanel;
     public TMP_Text scoreText;
+    public GameObject healthBar;
 
     public SwordSlicer swordSlicerLeft;
     public SwordSlicer swordSlicerRight;
@@ -25,9 +26,11 @@ public class MissedFruitHitWall : MonoBehaviour
     public int currentHealth;
     public int damageAmount = 10;
     public int combinedScore;
+    public bool gameFinished = false;
 
     private void Start()
     {
+        gameFinished = false;
         currentHealth = maxHealth;
         HealthBar.maxValue = maxHealth;
         HealthBar.value = currentHealth;
@@ -65,6 +68,8 @@ public class MissedFruitHitWall : MonoBehaviour
 
     public void Die()
     {
+        gameFinished = true;
+
         GameObject[] fruit = GameObject.FindGameObjectsWithTag("Fruit");
         
         int leftSwordScore = swordSlicerLeft.GetFinalScore();
@@ -87,6 +92,8 @@ public class MissedFruitHitWall : MonoBehaviour
         currentHealth = maxHealth;
         combinedScore = 0;
         fruitSpawner.gameRunning = false;
+        gameFinished = false;
+        healthBar.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

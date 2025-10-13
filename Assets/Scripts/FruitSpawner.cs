@@ -39,9 +39,9 @@ public class FruitSpawner : MonoBehaviour
             float frequency = Random.Range(minFrequency, maxFrequency);
 
             Vector3 randomTorque = new Vector3(
-                Random.Range(-maxTorqueForce, maxTorqueForce),
-                Random.Range(-maxTorqueForce, maxTorqueForce),
-                Random.Range(-maxTorqueForce, maxTorqueForce)
+                Random.Range(0, maxTorqueForce),
+                Random.Range(0, maxTorqueForce),
+                Random.Range(0, maxTorqueForce)
             );
 
             if (Random.value > 0.5f)
